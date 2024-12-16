@@ -1,0 +1,279 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "AlbumName",
+              "elicitationRequired": true,
+              "type": "AMAZON.MusicAlbum",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1369499581886.5667563347"
+              }
+            },
+            {
+              "name": "ArtistName",
+              "elicitationRequired": false,
+              "type": "AMAZON.MusicGroup",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "AlbumSearch",
+              "elicitationRequired": false,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "PlayAlbum",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.LoopOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": [
+            "weiter",
+            "nächster Titel",
+            "überspringen",
+            "nächster"
+          ]
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": [
+            "vorheriger Titel",
+            "zum vorherigen Titel",
+            "letzter Titel",
+            "zurück"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOffIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ShuffleOnIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "AlbumName",
+              "type": "AMAZON.MusicAlbum",
+              "samples": [
+                "{AlbumName} von {ArtistName}"
+              ]
+            },
+            {
+              "name": "ArtistName",
+              "type": "AMAZON.MusicGroup"
+            },
+            {
+              "name": "AlbumSearch",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "PlayAlbum",
+          "samples": [
+            "spiele das Album {AlbumSearch}",
+            "spiele das Album {AlbumName} von {ArtistName}",
+            "spiele das Album {AlbumName}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "PlaySixMusic",
+          "samples": [
+            "spiele six music"
+          ]
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "PlayOneFM",
+          "samples": [
+            "spiele one F M"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Schallplatte"
+              }
+            },
+            {
+              "name": {
+                "value": "EP"
+              }
+            },
+            {
+              "name": {
+                "value": "Single"
+              }
+            },
+            {
+              "name": {
+                "value": "Album"
+              }
+            }
+          ],
+          "name": "AMAZON.CreativeWorkType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "spiele die"
+              }
+            },
+            {
+              "name": {
+                "value": "spiele"
+              }
+            },
+            {
+              "name": {
+                "value": "queue die"
+              }
+            },
+            {
+              "name": {
+                "value": "queue"
+              }
+            }
+          ],
+          "name": "Action"
+        }
+      ],
+      "invocationName": "meine jukebox"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte nenne das Album und den Künstler"
+          }
+        ],
+        "id": "Elicit.Slot.1369499581886.5667563347"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Nenne eine gültige Station"
+          }
+        ],
+        "id": "Slot.Validation.837415070919.1192885191470.417935199921"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du spielen?"
+          }
+        ],
+        "id": "Slot.Validation.589991918952.269083327797.1142257618682"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du spielen?"
+          }
+        ],
+        "id": "Slot.Validation.1067747977337.1588499584951.722267158561"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du spielen?"
+          }
+        ],
+        "id": "Elicit.Slot.1067747977337.1588499584951"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du spielen?"
+          }
+        ],
+        "id": "Elicit.Slot.1067747977337.605192937255"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du spielen?"
+          }
+        ],
+        "id": "Elicit.Slot.1067747977337.439869298575"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was möchtest du tun?"
+          }
+        ],
+        "id": "Slot.Validation.599457706736.85148090460.205270980571"
+      }
+    ]
+  }
+}
